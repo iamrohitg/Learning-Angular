@@ -10,10 +10,17 @@ In Angular, everything is a component. A component is a class that controls a pa
 
 To create a component, you use the `@Component` decorator. Here's an example:
 
-typescript import { Component } from '@angular/core';
+```import { Component } from '@angular/core';
 
-@Component({ selector: 'app-root', templateUrl: './app.component.html', styleUrls: ['./app.component.css'] }) export class AppComponent { title = 'My First Angular App'; }
-
+@Component({
+ selector: 'app-root',
+ templateUrl: './app.component.html',
+ styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+ title = 'My First Angular App';
+}
+```
 
 ### Modules
 
@@ -21,9 +28,23 @@ Angular applications are modular and Angular has its own modularity system calle
 
 To create a module, you use the `@NgModule` decorator. Here's an example:
 
-typescript import { NgModule } from '@angular/core'; import { BrowserModule } from '@angular/platform-browser'; import { AppComponent } from './app.component';
+```
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { AppComponent } from './app.component';
 
-@NgModule({ declarations: [ AppComponent ], imports: [ BrowserModule ], providers: [], bootstrap: [AppComponent] }) export class AppModule { }
+@NgModule({
+ declarations: [
+    AppComponent
+ ],
+ imports: [
+    BrowserModule
+ ],
+ providers: [],
+ bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
 
 
 ### Services
@@ -32,12 +53,19 @@ Services in Angular are used to share data and logic across components. They are
 
 To create a service, you use the `@Injectable` decorator. Here's an example:
 
-typescript import { Injectable } from '@angular/core';
+```import { Injectable } from '@angular/core';
 
-@Injectable({ providedIn: 'root', }) export class DataService { constructor() { }
+@Injectable({
+ providedIn: 'root',
+})
+export class DataService {
+ constructor() { }
 
-getData() { return 'Hello from DataService!'; } }
-
+ getData() {
+    return 'Hello from DataService!';
+ }
+}
+```
 
 ### Routing
 
@@ -45,12 +73,23 @@ Angular provides a powerful routing system that allows you to navigate between d
 
 Here's an example of how to set up routing:
 
-typescript import { NgModule } from '@angular/core'; import { RouterModule, Routes } from '@angular/router'; import { HomeComponent } from './home/home.component'; import { AboutComponent } from './about/about.component';
+```
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
 
-const routes: Routes = [ { path: '', component: HomeComponent }, { path: 'about', component: AboutComponent } ];
+const routes: Routes = [
+ { path: '', component: HomeComponent },
+ { path: 'about', component: AboutComponent }
+];
 
-@NgModule({ imports: [RouterModule.forRoot(routes)], exports: [RouterModule] }) export class AppRoutingModule { }
-
+@NgModule({
+ imports: [RouterModule.forRoot(routes)],
+ exports: [RouterModule]
+})
+export class AppRoutingModule { }
+```
 
 ## Getting Started with Angular
 
@@ -58,18 +97,17 @@ To get started with Angular, you need to have Node.js and npm installed on your 
 
 Once you have Node.js and npm installed, you can install Angular CLI globally on your system using npm:
 
-bash npm install -g @angular/cli
+`npm install -g @angular/cli`
 
 
 After installing Angular CLI, you can create a new Angular application using the `ng new` command:
 
-bash ng new my-angular-app cd my-angular-app
+`ng new my-angular-app cd my-angular-app`
 
 
 To start the development server and run your application, use the `ng serve` command:
 
-bash ng serve
-
+`ng serve`
 
 This will compile your application and start a development server. You can access your application by navigating to `http://localhost:4200/` in your web browser.
 
@@ -104,7 +142,3 @@ This will compile your application and start a development server. You can acces
 - **Angular CLI**: A command-line interface for Angular. It helps you to initialize, develop, scaffold, and maintain Angular applications.
 - **Directives**: Angular directives are classes that add additional behavior to elements in your Angular applications.
 - **Dependency Injection**: A design pattern used in Angular to inject dependencies into classes.
-
-### Conclusion
-
-Angular is a powerful framework for building web applications. It provides a structured way to build applications using components, modules, services, 
