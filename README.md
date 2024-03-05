@@ -142,3 +142,10 @@ This will compile your application and start a development server. You can acces
 - **Angular CLI**: A command-line interface for Angular. It helps you to initialize, develop, scaffold, and maintain Angular applications.
 - **Directives**: Angular directives are classes that add additional behavior to elements in your Angular applications.
 - **Dependency Injection**: A design pattern used in Angular to inject dependencies into classes.
+
+
+<!-- { title: 'Explore the Docs', link: 'https://angular.dev' },
+          { title: 'Learn with Tutorials', link: 'https://angular.dev/tutorials' },
+          { title: 'CLI Docs', link: 'https://angular.dev/tools/cli' },
+          { title: 'Angular Language Service', link: 'https://angular.dev/tools/language-service' },
+          { title: 'Angular DevTools', link: 'https://angular.dev/tools/devtools' }, -->
