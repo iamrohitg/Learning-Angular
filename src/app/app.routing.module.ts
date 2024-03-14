@@ -1,5 +1,5 @@
 import { Component, NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 
 import { AuthComponent } from './auth/auth.component';
 import { RecipeModule } from './recipes/recipe.module';
@@ -16,7 +16,7 @@ const aapRoutes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(aapRoutes)],
+  imports: [RouterModule.forRoot(aapRoutes, { preloadingStrategy: PreloadAllModules })],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
